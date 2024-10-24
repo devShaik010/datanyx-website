@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,700');
 
+.img-hero
+{
+  display: none;
+}
 html {
   overflow-x: hidden;
 }
@@ -42,6 +46,7 @@ h3 {
   font-size: 15px;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 
@@ -1909,7 +1914,7 @@ h1 {
 }
 
 .blog-item {
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 7px;
   margin-bottom: 30px;
   text-align: center;
@@ -1917,6 +1922,7 @@ h1 {
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  border-radius: 10px;
 }
 
 .blog-item .blog-image {
@@ -2015,7 +2021,7 @@ h1 {
 }
 
 .blog-item:hover {
-  box-shadow: 0 16px 48px #e2e8ed;
+  box-shadow: 0 16px 48px #000000;
 }
 
 .blog-item:hover .blog-image img {
@@ -2023,7 +2029,7 @@ h1 {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
-  transform: scale(1.1);
+  transform: scale(0.8);
 }
 
 /* Conact Home Page Section */
@@ -2695,7 +2701,7 @@ img#nav-logo {
   margin: 10px;
   width: 100px;
   padding: 15px 0;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.544);
   border-top: 5px solid #ff2fff;
 }
 
@@ -2727,15 +2733,7 @@ div#clock {
   font-family: monospace;
 }
 
-#hero-image {
-  width: 200px;
-  height: 200px;
-  opacity: 0; /* Make the image fully transparent */
-  visibility: visible; /* Ensure it still occupies space */
-  display: block; /* Keep it centered */
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 @media (max-width: 720px) {
   .hero-area-bg {
@@ -2748,10 +2746,7 @@ div#clock {
 
   #hero-register {}
 
-  #hero-image {
-    display: block;
-  }
-
+ 
   #hero-area .contents .banner-btn {
     margin-top: 0px;
   }
@@ -2767,10 +2762,6 @@ div#clock {
   }
 
   #hero-register {}
-
-  #hero-image {
-    display: block;
-  }
 
   #hero-area .contents .banner-btn {
     margin-top: 0px;
@@ -3009,15 +3000,13 @@ li.stylish-list {
 
 .footer-about-us {
   display: flex;
-  justify-content: space-around;
-  padding: 40px 20px;
-  /* Adjust padding as needed */
-  background-color: #0b0a0a;
-  /* Background color for the section */
+  flex-direction: column; /* Change to column for vertical layout */
+  align-items: center;    /* Center items horizontally */
+  padding: 40px 20px;    /* Adjust padding as needed */
+  background-color: #0b0a0a; /* Background color for the section */
 }
 
 .footer-about-block {
-  flex: 1;
   margin: 10px;
   padding: 20px;
   background-color: #070707;
@@ -3030,6 +3019,10 @@ li.stylish-list {
   /* Use flexbox for inner layout */
   align-items: flex-start;
   /* Align items at the start (top) */
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  
 }
 
 .footer-about-image {
@@ -3044,13 +3037,15 @@ li.stylish-list {
 .footer-about-text {
   display: flex;
   flex-direction: column;
+  font-size: medium;
+  padding: 30px;
   /* Stack heading and paragraph vertically */
 }
 
 .footer-about-block:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   /* Scale up on hover */
-  box-shadow: 0 4px 20px rgb(255, 255, 255);
+  box-shadow: 0 4px 20px rgba(242, 2, 114, 0.372);
   /* Shadow effect on hover */
 }
 
@@ -3089,4 +3084,58 @@ li.stylish-list {
     margin-bottom: 10px;
     /* Add space below the image for mobile layout */
   }
+}
+
+
+/* mobile size block img */
+/* CSS for mobile devices */
+@media (max-width: 768px) {
+  .img-hero {
+    display: block;
+    opacity: 0; /* Make the image fully transparent */
+    visibility: hidden; /* Ensure the image is not visible in the layout */
+    pointer-events: none; /* Prevent any interaction */
+}
+
+}
+
+/* CSS for larger devices */
+@media (min-width: 769px) {
+  .img-hero {
+      display: none; /* Hide on larger devices */
+  }
+  .phase-container
+  {
+     margin-left:7rem ;
+  }
+}
+
+.footer-about-block {
+  display: flex;
+  flex-direction: row; /* Default layout for larger devices */
+  align-items: flex-start; /* Align items at the start */
+}
+
+.footer-about-image {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .footer-about-block {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center items horizontally */
+    text-align: center;     /* Center text for mobile */
+  }
+
+  .footer-about-image {
+    margin-bottom: 20px; /* Add space below the image */
+
+  }
+  .footer-about-block h2
+  {
+     text-align: center;
+  }
+
 }
