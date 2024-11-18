@@ -3148,8 +3148,8 @@ li.stylish-list {
 
 .sponsor-category {
   margin-bottom: 40px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 8px;
   padding: 25px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -3194,13 +3194,13 @@ li.stylish-list {
   align-items: center;
   padding: 15px;
   background: white;
-  border-radius: 8px;
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
 .sponsor-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
 }
 
 .sponsor-item img {
@@ -3208,6 +3208,8 @@ li.stylish-list {
   height: auto;
   filter: grayscale(0%);
   transition: filter 0.3s ease;
+  border-radius: 2px;
+
 }
 
 .sponsor-item:hover img {
@@ -3233,4 +3235,76 @@ li.stylish-list {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+
+.button2 {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff00dd;
+  background-color: #ff00dd;
+  overflow: hidden;
+}
+
+.button2, .button2__icon, .button2__text {
+  transition: all 0.3s;
+}
+
+.button2 .button2__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button2 .button2__icon {
+  position: absolute;
+  transform: translateX(200px);
+  height: 100%;
+  width: 39px;
+  background-color: #ff00dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button2 .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.button2:hover {
+  background: #ff00dd;
+}
+
+.button2:hover .button2__text {
+  color: transparent;
+}
+
+.button2:hover .button2__icon {
+  width: 148px;
+  transform: translateX(100px);
+}
+
+.button2:active .button2__icon {
+  background-color: #ff00dd;
+}
+
+.button2:active {
+  border: 1px solid #ff00dd;
+}
+
+.dwonload_box{
+   
+   background-color: #000;
+   justify-content: center;
+   display: flex;
 }
